@@ -8,7 +8,7 @@ export default {
   siteLanguage: "es", // Language Tag on <html> element
   siteHeadline: "Jesús Mendoza | Desarrollador JavaScript", // Headline for schema.org JSONLD
   siteBanner: "", // Your image for og:image tag. You can find it in the /static folder
-  favicon: "static/favicon.ico", // Your image for favicons. You can find it in the /src folder
+  favicon: "../assets/favicon.ico", // Your image for favicons. You can find it in the /src folder
   siteDescription:
     "Jesús Mendoza | Desarrollador Web | Desarrollo Web | Madrid - España | CDMX - México.", // Your site description
   author: "Jesús Mendoza", // Author for schemaORGJSONLD
