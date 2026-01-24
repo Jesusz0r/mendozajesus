@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "available": "Available for new projects",
+    "greeting": "Hi, my name is",
+    "roles": {
+      "frontend": "Front-end Developer",
+      "specialist": "React Specialist"
+    },
+    "explore": "Explore",
+    "codeComment1": "// {{years}}+ years building",
+    "codeComment2": "// web experiences"
+  },
+  "about": {
+    "badge": "About me",
+    "title": "Meet the",
+    "titleHighlight": "developer",
+    "subtitle": "+{{years}} years creating memorable web experiences",
+    "bio": "I'm a somewhat introverted person at first, but then I become someone who expresses their ideas and opinions with confidence. I enjoy participating in company-related topics, fostering a good work environment, and equally",
+    "bioHighlight": "teaching and learning",
+    "bioContinue": "new things every day.",
+    "stats": {
+      "years": "Years of experience",
+      "companies": "Companies"
+    },
+    "codeComment": "// My approach",
+    "techStack": "Tech Stack",
+    "techStackSubtitle": "Tools I work with every day"
+  },
+  "experience": {
+    "badge": "Professional journey",
+    "title": "My",
+    "titleHighlight": "experience",
+    "subtitle": "A journey through the companies where I've made my mark",
+    "current": "Current",
+    "jobs": {
+      "nuvocargo": {
+        "location": "Mexico City",
+        "date": "Mar 2022 - Present",
+        "duration": "+2 years",
+        "description": "Development of web applications for the logistics industry, creating intuitive and scalable interfaces."
+      },
+      "credijusto": {
+        "location": "Mexico City",
+        "date": "Oct 2019 - Mar 2022",
+        "duration": "2 years 5 months",
+        "description": "Development of fintech platforms for business credit services."
+      },
+      "fintonic": {
+        "location": "Madrid, Spain",
+        "date": "Apr 2018 - Aug 2019",
+        "duration": "1 year 4 months",
+        "description": "Development of features for personal finance management application."
+      },
+      "kingofapp": {
+        "location": "Madrid, Spain",
+        "date": "Jan 2017 - Apr 2018",
+        "duration": "1 year 3 months",
+        "description": "Creation of modules and plugins for mobile app development platform."
+      }
+    }
+  },
+  "footer": {
+    "madeWith": "with",
+    "by": "by Jesús Mendoza",
+    "rights": "All rights reserved"
+  },
+  "language": {
+    "switch": "ES"
+  }
+}

@@ -2,8 +2,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faHeart, faCode } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="relative bg-[#0f0f1a] text-white py-16 overflow-hidden">
       {/* Background effects */}
@@ -71,12 +74,12 @@ const Footer = () => {
           <div className="text-center space-y-2">
             <p className="text-white/40 text-sm flex items-center justify-center gap-2">
               <FontAwesomeIcon icon={faCode} className="text-[#7c3aed]" />
-              con
+              {t("footer.madeWith")}
               <FontAwesomeIcon icon={faHeart} className="text-[#e94560]" />
-              por Jesús Mendoza
+              {t("footer.by")}
             </p>
             <p className="text-white/20 text-xs font-mono">
-              &copy; {new Date().getFullYear()} • Todos los derechos reservados
+              &copy; {new Date().getFullYear()} • {t("footer.rights")}
             </p>
           </div>
         </div>

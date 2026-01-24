@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "available": "Disponible para nuevos proyectos",
+    "greeting": "Hola, mi nombre es",
+    "roles": {
+      "frontend": "Front-end Developer",
+      "specialist": "Especialista en React"
+    },
+    "explore": "Explorar",
+    "codeComment1": "// {{years}}+ years building",
+    "codeComment2": "// web experiences"
+  },
+  "about": {
+    "badge": "Sobre mí",
+    "title": "Conoce al",
+    "titleHighlight": "desarrollador",
+    "subtitle": "+{{years}} años creando experiencias web memorables",
+    "bio": "Soy una persona un poco introvertida al principio pero luego me vuelvo alguien que expresa sus ideas y opiniones con seguridad. Me gusta participar en temas relacionados con la empresa, el buen ambiente laboral y de forma equitativa",
+    "bioHighlight": "enseñar y aprender",
+    "bioContinue": "cosas nuevas cada día.",
+    "stats": {
+      "years": "Años de experiencia",
+      "companies": "Empresas"
+    },
+    "codeComment": "// Mi enfoque",
+    "techStack": "Tech Stack",
+    "techStackSubtitle": "Herramientas con las que trabajo día a día"
+  },
+  "experience": {
+    "badge": "Trayectoria profesional",
+    "title": "Mi",
+    "titleHighlight": "experiencia",
+    "subtitle": "Un recorrido por las empresas donde he dejado mi huella",
+    "current": "Actual",
+    "jobs": {
+      "nuvocargo": {
+        "location": "Ciudad de México",
+        "date": "Mar 2022 - Actualidad",
+        "duration": "+2 años",
+        "description": "Desarrollo de aplicaciones web para la industria logística, creando interfaces intuitivas y escalables."
+      },
+      "credijusto": {
+        "location": "Ciudad de México",
+        "date": "Oct 2019 - Mar 2022",
+        "duration": "2 años 5 meses",
+        "description": "Desarrollo de plataformas fintech para servicios de crédito empresarial."
+      },
+      "fintonic": {
+        "location": "Madrid, España",
+        "date": "Abr 2018 - Ago 2019",
+        "duration": "1 año 4 meses",
+        "description": "Desarrollo de funcionalidades para aplicación de gestión financiera personal."
+      },
+      "kingofapp": {
+        "location": "Madrid, España",
+        "date": "Ene 2017 - Abr 2018",
+        "duration": "1 año 3 meses",
+        "description": "Creación de módulos y plugins para plataforma de desarrollo de apps móviles."
+      }
+    }
+  },
+  "footer": {
+    "madeWith": "con",
+    "by": "por Jesús Mendoza",
+    "rights": "Todos los derechos reservados"
+  },
+  "language": {
+    "switch": "EN"
+  }
+}

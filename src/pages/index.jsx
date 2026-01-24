@@ -1,6 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faCode, faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
 // Components
 import Layout from "../components/Layout";
@@ -10,7 +11,19 @@ import ExperienceList from "../components/ExperienceList";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 
+const CAREER_START_DATE = new Date(2017, 0, 1); // January 2017
+
+const getYearsOfExperience = () => {
+  const now = new Date();
+  const years = now.getFullYear() - CAREER_START_DATE.getFullYear();
+  const monthDiff = now.getMonth() - CAREER_START_DATE.getMonth();
+  return monthDiff < 0 ? years - 1 : years;
+};
+
 const HomePage = () => {
+  const { t, i18n } = useTranslation();
+  const yearsOfExperience = getYearsOfExperience();
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -34,14 +47,14 @@ const HomePage = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
             <span className="text-white/60 text-sm font-mono">
-              Disponible para nuevos proyectos
+              {t("hero.available")}
             </span>
           </div>
 
           {/* Main heading */}
           <div className="relative mb-6">
             <p className="text-[#e94560] text-sm font-semibold tracking-[4px] uppercase mb-4">
-              Hola, mi nombre es
+              {t("hero.greeting")}
             </p>
             <h1 className="font-bold text-5xl sm:text-6xl lg:text-8xl text-white mb-2 relative">
               <span className="relative">
@@ -59,10 +72,11 @@ const HomePage = () => {
             <span className="text-[#e94560] font-mono text-2xl">{"<"}</span>
             <div className="text-xl sm:text-2xl lg:text-3xl font-light text-white/80 min-h-[40px]">
               <TypeAnimation
+                key={i18n.language}
                 sequence={[
-                  "Front-end Developer",
+                  t("hero.roles.frontend"),
                   2000,
-                  "Especialista en React",
+                  t("hero.roles.specialist"),
                   2000,
                 ]}
                 speed={50}
@@ -98,8 +112,8 @@ const HomePage = () => {
           </div>
 
           <div className="absolute bottom-32 right-10 hidden lg:block text-right font-mono text-sm text-white/20">
-            <p>{"// 7+ years building"}</p>
-            <p>{"// web experiences"}</p>
+            <p>{t("hero.codeComment1", { years: yearsOfExperience })}</p>
+            <p>{t("hero.codeComment2")}</p>
             <p className="text-[#e94560]/40">{"<React />"}</p>
           </div>
         </div>
@@ -111,7 +125,7 @@ const HomePage = () => {
           aria-label="Scroll down"
         >
           <span className="text-xs tracking-widest uppercase group-hover:tracking-[0.3em] transition-all">
-            Explorar
+            {t("hero.explore")}
           </span>
           <FontAwesomeIcon icon={faChevronDown} className="animate-bounce" />
         </a>
@@ -143,17 +157,17 @@ const HomePage = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#e94560]/10 border border-[#e94560]/20 mb-6">
               <FontAwesomeIcon icon={faCode} className="text-[#e94560] text-sm" />
               <span className="text-[#e94560] text-sm font-medium">
-                Sobre mí
+                {t("about.badge")}
               </span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
-              Conoce al{" "}
+              {t("about.title")}{" "}
               <span className="bg-gradient-to-r from-[#e94560] to-[#7c3aed] bg-clip-text text-transparent">
-                desarrollador
+                {t("about.titleHighlight")}
               </span>
             </h2>
             <p className="text-slate-500 max-w-lg mx-auto">
-              +7 años creando experiencias web memorables
+              {t("about.subtitle", { years: yearsOfExperience })}
             </p>
           </div>
 
@@ -171,14 +185,11 @@ const HomePage = () => {
               />
 
               <p className="text-lg leading-relaxed text-slate-600 relative z-10">
-                Soy una persona un poco introvertida al principio pero luego me
-                vuelvo alguien que expresa sus ideas y opiniones con seguridad.
-                Me gusta participar en temas relacionados con la empresa, el
-                buen ambiente laboral y de forma equitativa{" "}
+                {t("about.bio")}{" "}
                 <span className="text-[#e94560] font-semibold">
-                  enseñar y aprender
+                  {t("about.bioHighlight")}
                 </span>{" "}
-                cosas nuevas cada día.
+                {t("about.bioContinue")}
               </p>
 
               {/* Decorative corner */}
@@ -190,9 +201,8 @@ const HomePage = () => {
               {/* Stats grid */}
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: "7+", label: "Años de experiencia" },
-                  { value: "4", label: "Empresas" },
-                  { value: "2", label: "Países" },
+                  { value: `${yearsOfExperience}+`, label: t("about.stats.years") },
+                  { value: "4", label: t("about.stats.companies") },
                 ].map((stat) => (
                   <Card
                     key={stat.label}
@@ -213,7 +223,7 @@ const HomePage = () => {
                   <span className="w-3 h-3 rounded-full bg-yellow-500" />
                   <span className="w-3 h-3 rounded-full bg-green-500" />
                 </div>
-                <p className="text-slate-500">{"// Mi enfoque"}</p>
+                <p className="text-slate-500">{t("about.codeComment")}</p>
                 <p className="text-white">
                   <span className="text-[#7c3aed]">const</span>{" "}
                   <span className="text-[#e94560]">skills</span> = [
@@ -229,10 +239,10 @@ const HomePage = () => {
           {/* Skills section */}
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-slate-900 mb-2">
-              Tech Stack
+              {t("about.techStack")}
             </h3>
             <p className="text-slate-500">
-              Herramientas con las que trabajo día a día
+              {t("about.techStackSubtitle")}
             </p>
           </div>
 
@@ -272,17 +282,17 @@ const HomePage = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0f3460]/10 border border-[#0f3460]/20 mb-6">
               <span className="w-2 h-2 rounded-full bg-[#0f3460]" />
               <span className="text-[#0f3460] text-sm font-medium">
-                Trayectoria profesional
+                {t("experience.badge")}
               </span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
-              Mi{" "}
+              {t("experience.title")}{" "}
               <span className="bg-gradient-to-r from-[#0f3460] to-[#7c3aed] bg-clip-text text-transparent">
-                experiencia
+                {t("experience.titleHighlight")}
               </span>
             </h2>
             <p className="text-slate-500 max-w-lg mx-auto">
-              Un recorrido por las empresas donde he dejado mi huella
+              {t("experience.subtitle")}
             </p>
           </div>
 

@@ -2,48 +2,40 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBriefcase, faMapMarkerAlt, faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
-const experienceData = [
+const getExperienceData = (t) => [
   {
     name: "Nuvocargo",
-    location: "Ciudad de México",
-    date: "Mar 2022 - Actualidad",
-    duration: "+2 años",
+    translationKey: "nuvocargo",
     position: "Front-end Developer",
-    description: "Desarrollo de aplicaciones web para la industria logística, creando interfaces intuitivas y escalables.",
     tags: ["React", "TypeScript", "Next.js", "TailwindCSS"],
     isCurrent: true,
   },
   {
     name: "Credijusto",
-    location: "Ciudad de México",
-    date: "Oct 2019 - Mar 2022",
-    duration: "2 años 5 meses",
+    translationKey: "credijusto",
     position: "Front-end Developer",
-    description: "Desarrollo de plataformas fintech para servicios de crédito empresarial.",
     tags: ["React", "JavaScript", "Redux", "REST APIs"],
   },
   {
     name: "Fintonic",
-    location: "Madrid, España",
-    date: "Abr 2018 - Ago 2019",
-    duration: "1 año 4 meses",
+    translationKey: "fintonic",
     position: "Full-stack Developer",
-    description: "Desarrollo de funcionalidades para aplicación de gestión financiera personal.",
     tags: ["React", "Node.js", "MongoDB", "Express"],
   },
   {
     name: "King Of App",
-    location: "Madrid, España",
-    date: "Ene 2017 - Abr 2018",
-    duration: "1 año 3 meses",
+    translationKey: "kingofapp",
     position: "Full-stack Developer",
-    description: "Creación de módulos y plugins para plataforma de desarrollo de apps móviles.",
     tags: ["AngularJS", "Node.js", "Firebase", "Ionic"],
   },
 ];
 
 const ExperienceList = () => {
+  const { t } = useTranslation();
+  const experienceData = getExperienceData(t);
+
   return (
     <div>
       {/* Timeline */}
@@ -89,7 +81,7 @@ const ExperienceList = () => {
                           </h3>
                           {experience.isCurrent && (
                             <Badge className="bg-green-500/10 text-green-600 border-green-500/30 text-xs">
-                              Actual
+                              {t("experience.current")}
                             </Badge>
                           )}
                         </div>
@@ -98,7 +90,7 @@ const ExperienceList = () => {
                         </p>
                       </div>
                       <Badge variant="secondary" className="bg-slate-100 text-slate-600 font-normal">
-                        {experience.duration}
+                        {t(`experience.jobs.${experience.translationKey}.duration`)}
                       </Badge>
                     </div>
 
@@ -106,17 +98,17 @@ const ExperienceList = () => {
                     <div className="flex flex-wrap gap-4 text-sm text-slate-500 mb-4">
                       <span className="flex items-center gap-1.5">
                         <FontAwesomeIcon icon={faMapMarkerAlt} className="text-[#e94560] text-xs" />
-                        {experience.location}
+                        {t(`experience.jobs.${experience.translationKey}.location`)}
                       </span>
                       <span className="flex items-center gap-1.5">
                         <FontAwesomeIcon icon={faCalendarAlt} className="text-[#0f3460] text-xs" />
-                        {experience.date}
+                        {t(`experience.jobs.${experience.translationKey}.date`)}
                       </span>
                     </div>
 
                     {/* Description */}
                     <p className="text-slate-600 leading-relaxed mb-4">
-                      {experience.description}
+                      {t(`experience.jobs.${experience.translationKey}.description`)}
                     </p>
 
                     {/* Tags */}

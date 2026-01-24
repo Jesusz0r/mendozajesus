@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 import config from "../config";
 
@@ -11,6 +12,7 @@ const SEO = ({
   article,
   buildTime,
 }) => {
+  const { i18n } = useTranslation();
   let title;
   let description;
 
@@ -117,7 +119,7 @@ const SEO = ({
 
   return (
     <Helmet>
-      <html lang={config.siteLanguage} />
+      <html lang={i18n.language} />
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="image" content={image} />

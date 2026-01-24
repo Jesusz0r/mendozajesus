@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 
 import App from "./pages";
 import "./index.css";
+import "./i18n";
 
 // as HTMLElement
 
