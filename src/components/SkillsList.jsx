@@ -1,5 +1,4 @@
-import { css } from "@emotion/react";
-
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
@@ -8,66 +7,51 @@ import {
   faNodeJs,
   faReact,
   faGitAlt,
-  faAws,
 } from "@fortawesome/free-brands-svg-icons";
-import { faDatabase } from "@fortawesome/free-solid-svg-icons";
-import { mediumScreen } from "../styles/breakpoints";
+import { faGem, faRobot } from "@fortawesome/free-solid-svg-icons";
+import { Card } from "@/components/ui/card";
+
+const skills = [
+  { icon: faReact, name: "React", color: "#61DAFB" },
+  { icon: faJs, name: "JavaScript", color: "#F7DF1E" },
+  { icon: faNodeJs, name: "Node.js", color: "#68A063" },
+  { icon: faGem, name: "Ruby on Rails", color: "#CC0000" },
+  { icon: faRobot, name: "Claude Code", color: "#D97706" },
+  { icon: faGitAlt, name: "Git", color: "#F05032" },
+  { icon: faHtml5, name: "HTML5", color: "#E44D26" },
+  { icon: faCss3Alt, name: "CSS3", color: "#264DE4" },
+];
+
+const SkillCard = ({ skill }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <Card
+      className="group p-6 flex flex-col items-center gap-3 transition-all duration-300 cursor-default relative overflow-hidden hover:-translate-y-2 hover:shadow-lg border-0 bg-white"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div
+        className="absolute top-0 left-0 right-0 h-1 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-t-xl"
+        style={{ backgroundColor: skill.color }}
+      />
+      <FontAwesomeIcon
+        icon={skill.icon}
+        className="text-4xl transition-all duration-300 group-hover:scale-110"
+        style={{ color: isHovered ? skill.color : "#64748b" }}
+      />
+      <span className="text-sm font-medium text-slate-700">{skill.name}</span>
+    </Card>
+  );
+};
 
 const SkillList = () => {
   return (
-    <div
-      className="skills"
-      css={css`
-        margin-top: 50px;
-      `}
-    >
-      <div
-        className="skills-list"
-        css={css`
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          justify-items: center;
-          ${mediumScreen} {
-            grid-template-columns: repeat(auto-fill, 1fr);
-          }
-          svg {
-            max-width: 50px;
-          }
-          p {
-            font-size: 0.9em;
-            display: grid;
-            justify-items: center;
-            padding: 10px;
-            i {
-              font-size: 4em;
-            }
-          }
-        `}
-      >
-        <p>
-          <FontAwesomeIcon icon={faHtml5} size="5x" /> HTML5
-        </p>
-        <p>
-          <FontAwesomeIcon icon={faCss3Alt} size="5x" /> CSS3
-        </p>
-        <p>
-          <FontAwesomeIcon icon={faJs} size="5x" /> JavaScript
-        </p>
-        <p>
-          <FontAwesomeIcon icon={faNodeJs} size="5x" /> Node.js
-        </p>
-        <p>
-          <FontAwesomeIcon icon={faDatabase} size="5x" /> MongoDB
-        </p>
-        <p>
-          <FontAwesomeIcon icon={faReact} size="5x" /> React
-        </p>
-        <p>
-          <FontAwesomeIcon icon={faGitAlt} size="5x" /> Git
-        </p>
-        <p>
-          <FontAwesomeIcon icon={faAws} size="5x" /> AWS
-        </p>
+    <div className="mt-12">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:gap-6">
+        {skills.map((skill) => (
+          <SkillCard key={skill.name} skill={skill} />
+        ))}
       </div>
     </div>
   );
