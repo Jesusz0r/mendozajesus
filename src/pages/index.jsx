@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Typist from "react-text-typist";
+import { TypeAnimation } from "react-type-animation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faCode, faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
@@ -74,15 +74,16 @@ const HomePage = () => {
           <div className="flex items-center justify-center gap-3 mb-8">
             <span className="text-[#e94560] font-mono text-2xl">{"<"}</span>
             <div className="text-xl sm:text-2xl lg:text-3xl font-light text-white/80 min-h-[40px]">
-              <Typist
-                sentences={[
+              <TypeAnimation
+                sequence={[
                   "Front-end Developer",
-                  "Especialista en React"
+                  2000,
+                  "Especialista en React",
+                  2000,
                 ]}
-                typingSpeed={80}
-                deletingSpeed={50}
-                pauseTime={2000}
-                loop={true}
+                speed={50}
+                deletionSpeed={70}
+                repeat={Infinity}
               />
             </div>
             <span className="text-[#e94560] font-mono text-2xl">{"/>"}</span>
