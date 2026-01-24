@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faCode, faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
@@ -12,21 +11,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 
 const HomePage = () => {
-  useEffect(() => {
-    window.leadflowConfig = {
-      widgetId: "77c6c1ec-f1df-4fd5-8b5b-2ebe21ae8a9c",
-    };
-
-    const script = document.createElement("script");
-    script.src = "http://localhost:3000/widget.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <Layout>
       {/* Hero Section */}
