@@ -102,20 +102,20 @@ const HomePage = () => {
 
           {/* Social links */}
           <SocialLinks />
+        </div>
 
-          {/* Code decoration */}
-          <div className="absolute bottom-32 left-10 hidden lg:block text-left font-mono text-sm text-white/20">
-            <p>{"const developer = {"}</p>
-            <p className="pl-4">{"name: 'Jesús',"}</p>
-            <p className="pl-4">{"passion: 'code',"}</p>
-            <p>{"}"}</p>
-          </div>
+        {/* Code decoration - moved outside animated container */}
+        <div className="absolute bottom-32 left-10 hidden lg:block text-left font-mono text-sm text-white/20">
+          <p>{"const developer = {"}</p>
+          <p className="pl-4">{"name: 'Jesús',"}</p>
+          <p className="pl-4">{"passion: 'code',"}</p>
+          <p>{"}"}</p>
+        </div>
 
-          <div className="absolute bottom-32 right-10 hidden lg:block text-right font-mono text-sm text-white/20">
-            <p>{t("hero.codeComment1", { years: yearsOfExperience })}</p>
-            <p>{t("hero.codeComment2")}</p>
-            <p className="text-[#e94560]/40">{"<React />"}</p>
-          </div>
+        <div className="absolute bottom-32 right-10 hidden lg:block text-right font-mono text-sm text-white/20">
+          <p>{t("hero.codeComment1", { years: yearsOfExperience })}</p>
+          <p>{t("hero.codeComment2")}</p>
+          <p className="text-[#e94560]/40">{"<React />"}</p>
         </div>
 
         {/* Scroll indicator */}
