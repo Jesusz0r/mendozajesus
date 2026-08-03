@@ -1,70 +1,179 @@
 {
+  "navigation": {
+    "label": "Navegación principal",
+    "about": "Perfil",
+    "projects": "Proyectos",
+    "books": "Libros",
+    "experience": "Experiencia"
+  },
   "hero": {
-    "available": "Disponible para nuevos proyectos",
-    "greeting": "Hola, mi nombre es",
-    "roles": {
-      "frontend": "Front-end Developer",
-      "specialist": "Especialista en React"
-    },
-    "explore": "Explorar",
-    "codeComment1": "// {{years}}+ years building",
-    "codeComment2": "// web experiences"
+    "available": "Disponible para proyectos seleccionados",
+    "greeting": "Hola, soy",
+    "intro": "Desarrollador front-end con mentalidad de sistemas.",
+    "statement": "Diseño y lanzo experiencias web claras y confiables, donde la interfaz, el producto y la ingeniería se sienten como un solo sistema pensado con cuidado.",
+    "stackLabel": "Vocabulario de trabajo",
+    "noteLabel": "Una nota de trabajo",
+    "note": "El mejor software parece obvio porque el trabajo difícil ocurrió antes del clic.",
+    "explore": "Leer las notas",
+    "codeComment1": "// {{years}}+ años creando",
+    "codeComment2": "// sistemas digitales claros"
   },
   "about": {
-    "badge": "Sobre mí",
+    "badge": "02 / Perfil",
     "title": "Conoce al",
-    "titleHighlight": "desarrollador",
-    "subtitle": "+{{years}} años creando experiencias web memorables",
-    "bio": "Soy una persona un poco introvertida al principio pero luego me vuelvo alguien que expresa sus ideas y opiniones con seguridad. Me gusta participar en temas relacionados con la empresa, el buen ambiente laboral y de forma equitativa",
+    "titleHighlight": "constructor.",
+    "subtitle": "{{years}}+ años transformando preguntas de producto en experiencias web claras y útiles.",
+    "bio": "Callado al principio, luego con opiniones claras. Me importa la cultura de empresa, la colaboración consciente y",
     "bioHighlight": "enseñar y aprender",
-    "bioContinue": "cosas nuevas cada día.",
+    "bioContinue": "algo nuevo cada día.",
     "stats": {
       "years": "Años de experiencia",
       "companies": "Empresas"
     },
-    "codeComment": "// Mi enfoque",
-    "techStack": "Tech Stack",
-    "techStackSubtitle": "Herramientas con las que trabajo día a día"
+    "noteLabel": "Una nota sobre la práctica",
+    "codeComment": "// El estándar que mantengo",
+    "techStack": "Herramientas y métodos",
+    "techStackSubtitle": "La tecnología importa, pero también la forma de usarla: con mesura, curiosidad y cuidado por la persona al otro lado de la interfaz.",
+    "principles": {
+      "title": "Lo que guía el trabajo.",
+      "clarity": {
+        "title": "Claridad primero",
+        "description": "Resolver el problema antes de adornar la solución."
+      },
+      "craft": {
+        "title": "La calidad se siente",
+        "description": "Los pequeños detalles de implementación construyen confianza."
+      },
+      "learning": {
+        "title": "Seguir aprendiendo",
+        "description": "Compartir lo que funciona, cuestionar lo que no y mejorar la siguiente versión."
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "03 / Proyectos activos",
+    "title": "Trabajo ya",
+    "titleHighlight": "en producción.",
+    "intro": "Una selección de productos actuales y públicos. Cada enlace lleva a un despliegue de producción verificado.",
+    "count": "{{count}} despliegues de producción verificados",
+    "status": "En vivo",
+    "visit": "Visitar {{project}}",
+    "items": {
+      "citationPath": {
+        "category": "Visibilidad en IA",
+        "description": "Una plataforma basada en evidencia para auditar y mejorar la visibilidad en buscadores de IA."
+      },
+      "baiivo": {
+        "category": "Operaciones de negocio",
+        "description": "Un espacio de trabajo conectado para clientes, facturación y operaciones de negocio."
+      },
+      "crematic": {
+        "category": "Inteligencia inmobiliaria",
+        "description": "Análisis inmobiliario comercial y memorandos para comités de inversión con IA."
+      },
+      "onLeads": {
+        "category": "IA conversacional",
+        "description": "Un widget de chat con IA para captar, calificar y agendar citas con clientes potenciales."
+      },
+      "voztro": {
+        "category": "IA de voz",
+        "description": "Agentes de voz que ayudan a negocios mexicanos a atender llamadas de clientes todo el día."
+      },
+      "moodMentor": {
+        "category": "Bienestar",
+        "description": "Una aplicación de seguimiento del estado de ánimo con IA para la reflexión y el bienestar diario."
+      }
+    }
+  },
+  "books": {
+    "eyebrow": "04 / Libros",
+    "title": "Sistemas que vale",
+    "titleHighlight": "la pena documentar.",
+    "intro": "Proyectos técnicos extensos sobre los sistemas detrás de la IA moderna: desde la fiabilidad de agentes y la economía de inferencia hasta el despliegue y la práctica de ingeniería.",
+    "collectionNote": "Investigación · sistemas · práctica",
+    "featuredLabel": "Libros técnicos seleccionados",
+    "featuredCount": "{{count}} proyectos de libro",
+    "coverAlt": "Portada de {{title}}",
+    "visit": "Abrir {{title}} en Gumroad",
+    "items": {
+      "agentReliability": {
+        "discipline": "Agentes en producción",
+        "description": "Cómo probar, operar y mejorar agentes de IA que realizan trabajo relevante.",
+        "meta": "426 páginas · 37 capítulos"
+      },
+      "aiNative": {
+        "discipline": "Agentes de código",
+        "description": "Un método para especificar, verificar y asumir la responsabilidad del trabajo delegado.",
+        "meta": "358 páginas · 34 capítulos"
+      },
+      "inferenceEconomics": {
+        "discipline": "Infraestructura de IA",
+        "description": "Tokens, GPUs, latencia, capacidad y el negocio de servir modelos.",
+        "meta": "408 páginas · 36 capítulos"
+      },
+      "forwardDeployed": {
+        "discipline": "Despliegue de IA",
+        "description": "La disciplina de desplegar IA en entornos reales de clientes.",
+        "meta": "348 páginas · 25 capítulos"
+      },
+      "appliedAi": {
+        "discipline": "IA en producción",
+        "description": "Sistemas de agentes con flujos de trabajo, evaluación, trazas y controles de seguridad.",
+        "meta": "11 capítulos · guía práctica"
+      },
+      "agentLoop": {
+        "discipline": "Sistemas de IA",
+        "description": "Cómo los agentes de IA razonan, actúan y usan herramientas: una guía de ingeniería.",
+        "meta": "241 páginas · 17 capítulos"
+      }
+    }
   },
   "experience": {
-    "badge": "Trayectoria profesional",
-    "title": "Mi",
-    "titleHighlight": "experiencia",
-    "subtitle": "Un recorrido por las empresas donde he dejado mi huella",
+    "badge": "05 / Experiencia",
+    "title": "Una trayectoria de",
+    "titleHighlight": "trabajo.",
+    "subtitle": "Un recorrido consciente por equipos, productos e interfaces que los hicieron útiles.",
     "current": "Actual",
     "jobs": {
       "nuvocargo": {
+        "position": "Desarrollador Front-end",
         "location": "Ciudad de México",
         "date": "Mar 2022 - Actualidad",
         "duration": "+2 años",
         "description": "Desarrollo de aplicaciones web para la industria logística, creando interfaces intuitivas y escalables."
       },
       "credijusto": {
+        "position": "Desarrollador Front-end",
         "location": "Ciudad de México",
         "date": "Oct 2019 - Mar 2022",
         "duration": "2 años 5 meses",
         "description": "Desarrollo de plataformas fintech para servicios de crédito empresarial."
       },
       "fintonic": {
+        "position": "Desarrollador Full-stack",
         "location": "Madrid, España",
         "date": "Abr 2018 - Ago 2019",
         "duration": "1 año 4 meses",
-        "description": "Desarrollo de funcionalidades para aplicación de gestión financiera personal."
+        "description": "Desarrollo de funcionalidades para una aplicación de gestión financiera personal."
       },
       "kingofapp": {
+        "position": "Desarrollador Full-stack",
         "location": "Madrid, España",
         "date": "Ene 2017 - Abr 2018",
         "duration": "1 año 3 meses",
-        "description": "Creación de módulos y plugins para plataforma de desarrollo de apps móviles."
+        "description": "Creación de módulos y plugins para una plataforma de desarrollo de apps móviles."
       }
     }
   },
   "footer": {
-    "madeWith": "con",
-    "by": "por Jesús Mendoza",
-    "rights": "Todos los derechos reservados"
+    "tagline": "Interfaces, sistemas y libros técnicos.",
+    "madeWith": "Hecho con cuidado por",
+    "by": "Jesús Mendoza",
+    "rights": "Todos los derechos reservados",
+    "backToTop": "Volver al inicio"
   },
   "language": {
-    "switch": "EN"
+    "switch": "EN",
+    "switchLabel": "Cambiar idioma a inglés"
   }
 }

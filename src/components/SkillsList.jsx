@@ -1,60 +1,50 @@
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHtml5,
-  faCss3Alt,
-  faJs,
-  faNodeJs,
-  faReact,
-  faGitAlt,
-} from "@fortawesome/free-brands-svg-icons";
-import { faGem, faRobot } from "@fortawesome/free-solid-svg-icons";
-import { Card } from "@/components/ui/card";
+  Bot,
+  Braces,
+  Code2,
+  FileCode2,
+  Gem,
+  GitBranch,
+  Paintbrush,
+  Server,
+} from "lucide-react";
 
 const skills = [
-  { icon: faReact, name: "React", color: "#61DAFB" },
-  { icon: faJs, name: "JavaScript", color: "#F7DF1E" },
-  { icon: faNodeJs, name: "Node.js", color: "#68A063" },
-  { icon: faGem, name: "Ruby on Rails", color: "#CC0000" },
-  { icon: faRobot, name: "Claude Code", color: "#D97706" },
-  { icon: faGitAlt, name: "Git", color: "#F05032" },
-  { icon: faHtml5, name: "HTML5", color: "#E44D26" },
-  { icon: faCss3Alt, name: "CSS3", color: "#264DE4" },
+  { icon: Braces, name: "React", color: "#61dafb" },
+  { icon: Code2, name: "JavaScript", color: "#f7df1e" },
+  { icon: Server, name: "Node.js", color: "#68a063" },
+  { icon: Gem, name: "Ruby on Rails", color: "#ff4b2f" },
+  { icon: Bot, name: "Claude Code", color: "#d4a574" },
+  { icon: GitBranch, name: "Git", color: "#f1502f" },
+  { icon: FileCode2, name: "HTML5", color: "#e34c26" },
+  { icon: Paintbrush, name: "CSS3", color: "#264de4" },
 ];
 
-const SkillCard = ({ skill }) => {
-  const [isHovered, setIsHovered] = useState(false);
+const SkillsList = () => (
+  <div className="mt-10 grid grid-cols-2 gap-px border border-border bg-border sm:grid-cols-4">
+    {skills.map(({ icon: Icon, name, color }) => (
+      <article
+        key={name}
+        className="group relative overflow-hidden bg-secondary p-6 transition-colors duration-300 hover:bg-background sm:p-7"
+      >
+        <span
+          aria-hidden="true"
+          className="absolute left-0 top-0 h-full w-1 origin-top scale-y-0 transition-transform duration-300 group-hover:scale-y-100 motion-reduce:transform-none"
+          style={{ backgroundColor: color }}
+        />
+        <Icon
+          size={28}
+          strokeWidth={1.5}
+          style={{ color }}
+          aria-hidden="true"
+          className="transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110 motion-reduce:transform-none"
+        />
+        <p className="mt-8 font-mono text-[10px] font-medium uppercase tracking-[0.12em] text-muted-foreground">
+          {name}
+        </p>
+      </article>
+    ))}
+  </div>
+);
 
-  return (
-    <Card
-      className="group p-6 flex flex-col items-center gap-3 transition-all duration-300 cursor-default relative overflow-hidden hover:-translate-y-2 hover:shadow-lg border-0 bg-white"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <div
-        className="absolute top-0 left-0 right-0 h-1 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-t-xl"
-        style={{ backgroundColor: skill.color }}
-      />
-      <FontAwesomeIcon
-        icon={skill.icon}
-        className="text-4xl transition-all duration-300 group-hover:scale-110"
-        style={{ color: isHovered ? skill.color : "#64748b" }}
-      />
-      <span className="text-sm font-medium text-slate-700">{skill.name}</span>
-    </Card>
-  );
-};
-
-const SkillList = () => {
-  return (
-    <div className="mt-12">
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:gap-6">
-        {skills.map((skill) => (
-          <SkillCard key={skill.name} skill={skill} />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default SkillList;
+export default SkillsList;

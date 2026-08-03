@@ -1,93 +1,57 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faHeart, faCode } from "@fortawesome/free-solid-svg-icons";
-import { Button } from "@/components/ui/button";
+import { ArrowUp, Code2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+
+import SocialLinks from "./SocialLinks";
 
 const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="relative bg-[#0f0f1a] text-white py-16 overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#e94560] rounded-full filter blur-[150px] opacity-10" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#7c3aed] rounded-full filter blur-[150px] opacity-10" />
-      </div>
+    <footer className="relative overflow-hidden bg-[#050505] text-foreground">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 noise"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute -right-40 -top-40 h-[40rem] w-[40rem] rounded-full border border-accent/10"
+      />
 
-      {/* Grid pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:48px_48px]" />
-
-      <div className="container mx-auto max-w-[1000px] px-6 relative z-10">
-        <div className="flex flex-col items-center gap-8">
-          {/* Logo/Name */}
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-2">
-              <span className="text-white">Jesús</span>{" "}
-              <span className="bg-gradient-to-r from-[#e94560] to-[#7c3aed] bg-clip-text text-transparent">
-                Mendoza
-              </span>
-            </h3>
-            <p className="text-white/50 text-sm font-mono">
-              {"<Front-end Developer />"}
+      <div className="container relative z-10 mx-auto max-w-[1320px] px-6 py-20 sm:px-8 sm:py-24 lg:px-10">
+        <div className="grid gap-12 border-b border-border pb-14 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+          <div>
+            <p className="font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-accent">
+              Jesús Mendoza / field notes
             </p>
+            <h2 className="mt-5 max-w-3xl font-sans text-4xl font-extrabold leading-[0.92] tracking-[-0.04em] text-balance sm:text-5xl lg:text-6xl">
+              {t("footer.tagline")}
+            </h2>
           </div>
+          <SocialLinks />
+        </div>
 
-          {/* Social Links */}
-          <div className="flex gap-3">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="w-12 h-12 rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-white hover:bg-[#e94560] hover:border-[#e94560] transition-all duration-300"
-              asChild
+        <div className="flex flex-col gap-5 pt-8 font-mono text-[10px] font-medium uppercase tracking-[0.13em] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+          <p className="flex items-center gap-2">
+            <Code2 size={14} strokeWidth={1.6} className="text-accent" aria-hidden="true" />
+            {t("footer.madeWith")} {t("footer.by")}
+          </p>
+          <div className="flex items-center gap-5">
+            <p>&copy; {new Date().getFullYear()} · {t("footer.rights")}</p>
+            <a
+              href="#home"
+              className="group inline-flex items-center gap-2 transition-colors hover:text-foreground"
             >
-              <a
-                href="http://github.com/Jesusz0r"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Github"
-              >
-                <FontAwesomeIcon icon={faGithub} className="text-lg" />
-              </a>
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="w-12 h-12 rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-white hover:bg-[#0077b5] hover:border-[#0077b5] transition-all duration-300"
-              asChild
-            >
-              <a
-                href="https://es.linkedin.com/in/jesusreveron"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn"
-              >
-                <FontAwesomeIcon icon={faLinkedin} className="text-lg" />
-              </a>
-            </Button>
-          </div>
-
-          {/* Divider */}
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-
-          {/* Copyright */}
-          <div className="text-center space-y-2">
-            <p className="text-white/40 text-sm flex items-center justify-center gap-2">
-              <FontAwesomeIcon icon={faCode} className="text-[#7c3aed]" />
-              {t("footer.madeWith")}
-              <FontAwesomeIcon icon={faHeart} className="text-[#e94560]" />
-              {t("footer.by")}
-            </p>
-            <p className="text-white/20 text-xs font-mono">
-              &copy; {new Date().getFullYear()} • {t("footer.rights")}
-            </p>
+              {t("footer.backToTop")}
+              <ArrowUp
+                size={13}
+                strokeWidth={1.7}
+                aria-hidden="true"
+                className="transition-transform duration-300 group-hover:-translate-y-0.5 motion-reduce:transform-none"
+              />
+            </a>
           </div>
         </div>
       </div>
-
-      {/* Corner decorations */}
-      <div className="absolute top-8 left-8 w-12 h-12 border-l border-t border-white/10" />
-      <div className="absolute top-8 right-8 w-12 h-12 border-r border-t border-white/10" />
     </footer>
   );
 };

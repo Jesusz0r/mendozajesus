@@ -1,70 +1,179 @@
 {
+  "navigation": {
+    "label": "Primary navigation",
+    "about": "Profile",
+    "projects": "Projects",
+    "books": "Books",
+    "experience": "Experience"
+  },
   "hero": {
-    "available": "Available for new projects",
-    "greeting": "Hi, my name is",
-    "roles": {
-      "frontend": "Front-end Developer",
-      "specialist": "React Specialist"
-    },
-    "explore": "Explore",
-    "codeComment1": "// {{years}}+ years building",
-    "codeComment2": "// web experiences"
+    "available": "Available for selected projects",
+    "greeting": "Hello, I'm",
+    "intro": "Front-end developer and systems-minded builder.",
+    "statement": "I design and ship clear, dependable web experiences—where interface, product, and engineering feel like one considered system.",
+    "stackLabel": "Working vocabulary",
+    "noteLabel": "A working note",
+    "note": "The best software feels obvious because the hard thinking happened before the click.",
+    "explore": "Read the field notes",
+    "codeComment1": "// {{years}}+ years shipping",
+    "codeComment2": "// clear digital systems"
   },
   "about": {
-    "badge": "About me",
+    "badge": "02 / Profile",
     "title": "Meet the",
-    "titleHighlight": "developer",
-    "subtitle": "+{{years}} years creating memorable web experiences",
-    "bio": "I'm a somewhat introverted person at first, but then I become someone who expresses their ideas and opinions with confidence. I enjoy participating in company-related topics, fostering a good work environment, and equally",
+    "titleHighlight": "builder.",
+    "subtitle": "{{years}}+ years turning product questions into clear, useful web experiences.",
+    "bio": "Quiet at first, then opinionated. I care about company culture, thoughtful collaboration, and",
     "bioHighlight": "teaching and learning",
-    "bioContinue": "new things every day.",
+    "bioContinue": "something new every day.",
     "stats": {
       "years": "Years of experience",
       "companies": "Companies"
     },
-    "codeComment": "// My approach",
-    "techStack": "Tech Stack",
-    "techStackSubtitle": "Tools I work with every day"
+    "noteLabel": "A note on practice",
+    "codeComment": "// The standard I hold",
+    "techStack": "Tools & methods",
+    "techStackSubtitle": "The technology matters, but so does the way it is used: with restraint, curiosity, and care for the person on the other side.",
+    "principles": {
+      "title": "What guides the work.",
+      "clarity": {
+        "title": "Clarity first",
+        "description": "Solve the problem before decorating the solution."
+      },
+      "craft": {
+        "title": "Quality is felt",
+        "description": "The small implementation details shape trust."
+      },
+      "learning": {
+        "title": "Keep learning",
+        "description": "Share what works, question what does not, and improve the next pass."
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "03 / Live projects",
+    "title": "Work already",
+    "titleHighlight": "in production.",
+    "intro": "A selection of current, public products. Every link leads to a verified production deployment.",
+    "count": "{{count}} verified production deployments",
+    "status": "Live",
+    "visit": "Visit {{project}}",
+    "items": {
+      "citationPath": {
+        "category": "AI discoverability",
+        "description": "An evidence-led platform for auditing and improving AI-search visibility."
+      },
+      "baiivo": {
+        "category": "Business operations",
+        "description": "A connected workspace for client work, billing, and business operations."
+      },
+      "crematic": {
+        "category": "Real estate intelligence",
+        "description": "AI-powered commercial real estate underwriting and investment committee memos."
+      },
+      "onLeads": {
+        "category": "Conversational AI",
+        "description": "An AI chat widget for lead engagement, qualification, and appointment booking."
+      },
+      "voztro": {
+        "category": "Voice AI",
+        "description": "Voice agents that help Mexican businesses handle customer calls around the clock."
+      },
+      "moodMentor": {
+        "category": "Wellbeing",
+        "description": "An AI-powered mood-tracking app for reflection and daily wellbeing insights."
+      }
+    }
+  },
+  "books": {
+    "eyebrow": "04 / Books",
+    "title": "Systems worth",
+    "titleHighlight": "documenting.",
+    "intro": "Long-form technical projects about the systems behind modern AI—from agent reliability and inference economics to deployment and engineering practice.",
+    "collectionNote": "Research · systems · practice",
+    "featuredLabel": "Selected technical books",
+    "featuredCount": "{{count}} book projects",
+    "coverAlt": "Cover of {{title}}",
+    "visit": "Open {{title}} on Gumroad",
+    "items": {
+      "agentReliability": {
+        "discipline": "Production agents",
+        "description": "Testing, operating, and improving AI agents that do consequential work.",
+        "meta": "426 pages · 37 chapters"
+      },
+      "aiNative": {
+        "discipline": "Coding agents",
+        "description": "A method for specifying, verifying, and owning delegated implementation.",
+        "meta": "358 pages · 34 chapters"
+      },
+      "inferenceEconomics": {
+        "discipline": "AI infrastructure",
+        "description": "Tokens, GPUs, latency, capacity, and the business of serving models.",
+        "meta": "408 pages · 36 chapters"
+      },
+      "forwardDeployed": {
+        "discipline": "AI deployment",
+        "description": "The discipline of deploying AI in real customer environments.",
+        "meta": "348 pages · 25 chapters"
+      },
+      "appliedAi": {
+        "discipline": "Production AI",
+        "description": "Building agent systems with workflows, evaluation, tracing, and safety controls.",
+        "meta": "11 chapters · field guide"
+      },
+      "agentLoop": {
+        "discipline": "AI systems",
+        "description": "How AI agents think, act, and use tools—an engineering guide.",
+        "meta": "241 pages · 17 chapters"
+      }
+    }
   },
   "experience": {
-    "badge": "Professional journey",
-    "title": "My",
-    "titleHighlight": "experience",
-    "subtitle": "A journey through the companies where I've made my mark",
+    "badge": "05 / Experience",
+    "title": "A record of",
+    "titleHighlight": "the work.",
+    "subtitle": "A considered path through teams, products, and the interfaces that made them useful.",
     "current": "Current",
     "jobs": {
       "nuvocargo": {
+        "position": "Front-end Developer",
         "location": "Mexico City",
         "date": "Mar 2022 - Present",
         "duration": "+2 years",
         "description": "Development of web applications for the logistics industry, creating intuitive and scalable interfaces."
       },
       "credijusto": {
+        "position": "Front-end Developer",
         "location": "Mexico City",
         "date": "Oct 2019 - Mar 2022",
         "duration": "2 years 5 months",
         "description": "Development of fintech platforms for business credit services."
       },
       "fintonic": {
+        "position": "Full-stack Developer",
         "location": "Madrid, Spain",
         "date": "Apr 2018 - Aug 2019",
         "duration": "1 year 4 months",
-        "description": "Development of features for personal finance management application."
+        "description": "Development of features for a personal finance management application."
       },
       "kingofapp": {
+        "position": "Full-stack Developer",
         "location": "Madrid, Spain",
         "date": "Jan 2017 - Apr 2018",
         "duration": "1 year 3 months",
-        "description": "Creation of modules and plugins for mobile app development platform."
+        "description": "Creation of modules and plugins for a mobile app development platform."
       }
     }
   },
   "footer": {
-    "madeWith": "with",
-    "by": "by Jesús Mendoza",
-    "rights": "All rights reserved"
+    "tagline": "Interfaces, systems, and technical books.",
+    "madeWith": "Built with care by",
+    "by": "Jesús Mendoza",
+    "rights": "All rights reserved",
+    "backToTop": "Back to the beginning"
   },
   "language": {
-    "switch": "ES"
+    "switch": "ES",
+    "switchLabel": "Switch language to Spanish"
   }
 }

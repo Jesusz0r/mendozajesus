@@ -1,42 +1,39 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { Button } from "@/components/ui/button";
+import { ArrowUpRight, Github, Linkedin } from "lucide-react";
 
-const SocialLinks = () => {
-  return (
-    <div className="flex justify-center gap-4">
-      <Button
-        variant="outline"
-        size="icon"
-        className="w-12 h-12 rounded-full border-white/30 bg-transparent text-white hover:bg-[#e94560] hover:border-[#e94560] hover:text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(233,69,96,0.3)]"
-        asChild
+const socialLinks = [
+  {
+    href: "https://github.com/Jesusz0r",
+    label: "GitHub",
+    icon: Github,
+  },
+  {
+    href: "https://es.linkedin.com/in/jesusreveron",
+    label: "LinkedIn",
+    icon: Linkedin,
+  },
+];
+
+const SocialLinks = ({ className = "" }) => (
+  <div className={`flex flex-wrap gap-3 ${className}`.trim()}>
+    {socialLinks.map(({ href, label, icon: Icon }) => (
+      <a
+        key={label}
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        className="group inline-flex items-center gap-2 border border-border bg-secondary px-4 py-2.5 font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-foreground transition-colors hover:border-accent hover:bg-accent hover:text-accent-foreground"
       >
-        <a
-          href="http://github.com/Jesusz0r"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Github"
-        >
-          <FontAwesomeIcon icon={faGithub} className="text-xl" />
-        </a>
-      </Button>
-      <Button
-        variant="outline"
-        size="icon"
-        className="w-12 h-12 rounded-full border-white/30 bg-transparent text-white hover:bg-[#0077b5] hover:border-[#0077b5] hover:text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,119,181,0.3)]"
-        asChild
-      >
-        <a
-          href="https://es.linkedin.com/in/jesusreveron"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="LinkedIn"
-        >
-          <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
-        </a>
-      </Button>
-    </div>
-  );
-};
+        <Icon size={15} strokeWidth={1.7} aria-hidden="true" />
+        {label}
+        <ArrowUpRight
+          size={13}
+          strokeWidth={1.7}
+          aria-hidden="true"
+          className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transform-none"
+        />
+      </a>
+    ))}
+  </div>
+);
 
 export default SocialLinks;
