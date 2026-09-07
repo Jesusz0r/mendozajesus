@@ -1,63 +1,58 @@
 {
   "navigation": {
     "label": "Primary navigation",
+    "practice": "Software engineering",
+    "skip": "Skip to content",
     "about": "Profile",
     "projects": "Projects",
     "books": "Books",
     "experience": "Experience"
   },
   "hero": {
-    "available": "Available for selected projects",
-    "greeting": "Hello, I'm",
-    "intro": "Front-end developer and systems-minded builder.",
-    "statement": "I design and ship clear, dependable web experiences—where interface, product, and engineering feel like one considered system.",
-    "stackLabel": "Working vocabulary",
-    "noteLabel": "A working note",
-    "note": "The best software feels obvious because the hard thinking happened before the click.",
-    "explore": "Read the field notes",
-    "codeComment1": "// {{years}}+ years shipping",
-    "codeComment2": "// clear digital systems"
+    "greeting": "Software engineer / Author / Independent builder",
+    "since": "Building since 2017",
+    "statement": "From interfaces to AI products. I build software, and write about the systems behind it.",
+    "explore": "Meet the engineer",
+    "location": "Mexico City",
+    "disciplines": "Frontend roots. Systems thinking."
   },
   "about": {
-    "badge": "02 / Profile",
-    "title": "Meet the",
-    "titleHighlight": "builder.",
-    "subtitle": "{{years}}+ years turning product questions into clear, useful web experiences.",
-    "bio": "Quiet at first, then opinionated. I care about company culture, thoughtful collaboration, and",
+    "badge": "Engineer profile",
+    "title": "The human",
+    "titleHighlight": "in the loop.",
+    "role": "Front-end developer & technical author",
+    "subtitle": "{{years}}+ years of web engineering across app platforms, fintech, and logistics.",
+    "bio": "Quiet at first. Opinionated about code. I care about how a team works as much as what it ships, and about",
     "bioHighlight": "teaching and learning",
     "bioContinue": "something new every day.",
-    "stats": {
-      "years": "Years of experience",
-      "companies": "Companies"
-    },
-    "noteLabel": "A note on practice",
-    "codeComment": "// The standard I hold",
     "techStack": "Tools & methods",
-    "techStackSubtitle": "The technology matters, but so does the way it is used: with restraint, curiosity, and care for the person on the other side.",
     "principles": {
-      "title": "What guides the work.",
       "clarity": {
-        "title": "Clarity first",
-        "description": "Solve the problem before decorating the solution."
+        "title": "Understand first",
+        "description": "Solve the problem before designing the abstraction."
       },
       "craft": {
-        "title": "Quality is felt",
-        "description": "The small implementation details shape trust."
+        "title": "Own the details",
+        "description": "Interfaces, edge cases, and code another engineer has to maintain."
       },
       "learning": {
-        "title": "Keep learning",
-        "description": "Share what works, question what does not, and improve the next pass."
+        "title": "Build. Learn. Share.",
+        "description": "Turn lessons from building systems into something other engineers can use."
       }
     }
   },
   "projects": {
-    "eyebrow": "03 / Live projects",
-    "title": "Work already",
-    "titleHighlight": "in production.",
-    "intro": "A selection of current, public products. Every link leads to a verified production deployment.",
-    "count": "{{count}} verified production deployments",
-    "status": "Live",
-    "visit": "Visit {{project}}",
+    "eyebrow": "Independent software",
+    "title": "Product circuit",
+    "intro": "Different problems. Same engineer. Software built for real use.",
+    "count": "{{count}} products connected",
+    "builtBy": "Built by",
+    "select": "Select a node to inspect a product.",
+    "inspect": "Inspect {{project}}",
+    "inspector": "Project inspector",
+    "viewDetails": "View {{project}} details",
+    "visit": "Open {{project}}",
+
     "items": {
       "citationPath": {
         "category": "AI discoverability",
@@ -86,13 +81,11 @@
     }
   },
   "books": {
-    "eyebrow": "04 / Books",
-    "title": "Systems worth",
-    "titleHighlight": "documenting.",
-    "intro": "Long-form technical projects about the systems behind modern AI—from agent reliability and inference economics to deployment and engineering practice.",
-    "collectionNote": "Research · systems · practice",
-    "featuredLabel": "Selected technical books",
-    "featuredCount": "{{count}} book projects",
+    "eyebrow": "Technical publications",
+    "title": "Engineering,",
+    "titleHighlight": "in writing.",
+    "intro": "Agent reliability. Inference economics. Production AI. Technical books for engineers who need more than a working demo.",
+    "read": "Read on Gumroad",
     "coverAlt": "Cover of {{title}}",
     "visit": "Open {{title}} on Gumroad",
     "items": {
@@ -129,48 +122,45 @@
     }
   },
   "experience": {
-    "badge": "05 / Experience",
-    "title": "A record of",
-    "titleHighlight": "the work.",
-    "subtitle": "A considered path through teams, products, and the interfaces that made them useful.",
+    "badge": "Career route / 2017 — present",
+    "title": "Madrid",
+    "titleHighlight": "→ Mexico City.",
+    "subtitle": "App platforms, personal finance, business lending, and cross-border logistics. Different domains. An expanding engineering toolkit.",
     "current": "Current",
     "jobs": {
       "nuvocargo": {
         "position": "Front-end Developer",
         "location": "Mexico City",
         "date": "Mar 2022 - Present",
-        "duration": "+2 years",
         "description": "Development of web applications for the logistics industry, creating intuitive and scalable interfaces."
       },
       "credijusto": {
         "position": "Front-end Developer",
         "location": "Mexico City",
         "date": "Oct 2019 - Mar 2022",
-        "duration": "2 years 5 months",
         "description": "Development of fintech platforms for business credit services."
       },
       "fintonic": {
         "position": "Full-stack Developer",
         "location": "Madrid, Spain",
         "date": "Apr 2018 - Aug 2019",
-        "duration": "1 year 4 months",
         "description": "Development of features for a personal finance management application."
       },
       "kingofapp": {
         "position": "Full-stack Developer",
         "location": "Madrid, Spain",
         "date": "Jan 2017 - Apr 2018",
-        "duration": "1 year 3 months",
         "description": "Creation of modules and plugins for a mobile app development platform."
       }
     }
   },
   "footer": {
-    "tagline": "Interfaces, systems, and technical books.",
-    "madeWith": "Built with care by",
-    "by": "Jesús Mendoza",
-    "rights": "All rights reserved",
-    "backToTop": "Back to the beginning"
+    "eyebrow": "Next up / your idea",
+    "title": "Let’s build",
+    "titleHighlight": "something.",
+    "intro": "A product to build, an engineering problem, or a good question. Find me here.",
+    "note": "Made for humans. Built with React.",
+    "backToTop": "Back to top"
   },
   "language": {
     "switch": "ES",

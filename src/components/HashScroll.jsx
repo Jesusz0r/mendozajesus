@@ -1,7 +1,13 @@
 import { useEffect } from "react";
 
 const scrollToHashTarget = () => {
-  const targetId = decodeURIComponent(window.location.hash.slice(1));
+  let targetId;
+
+  try {
+    targetId = decodeURIComponent(window.location.hash.slice(1));
+  } catch {
+    return;
+  }
 
   if (!targetId) {
     return;

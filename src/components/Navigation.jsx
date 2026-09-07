@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 
 const navigationItems = [
-  { href: "#sobre-mi", labelKey: "navigation.about" },
   { href: "#projects", labelKey: "navigation.projects" },
+  { href: "#sobre-mi", labelKey: "navigation.about" },
   { href: "#books", labelKey: "navigation.books" },
   { href: "#experiencia", labelKey: "navigation.experience" },
 ];
@@ -14,50 +14,48 @@ const Navigation = () => {
   const nextPath = `/${nextLang}`;
 
   const handleLanguageChange = (event) => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
     event.preventDefault();
+    window.history.pushState(
+      {},
+      "",
+      `${nextPath}${window.location.search}${window.location.hash}`,
+    );
     i18n.changeLanguage(nextLang);
-    window.history.pushState({}, "", nextPath);
   };
 
   return (
-    <nav
-      aria-label={t("navigation.label")}
-      className="fixed left-0 top-0 z-40 w-full border-b border-border bg-background/80 backdrop-blur-md"
-    >
-      <div className="container mx-auto flex max-w-[1320px] items-center justify-between px-6 py-4 sm:px-8 lg:px-10">
-        <a
-          href="#home"
-          className="font-mono text-xs font-medium tracking-[0.18em] text-foreground transition-colors hover:text-accent"
-          aria-label="Jesús Mendoza"
-        >
-          JM
-        </a>
-
-        <div className="flex items-center gap-1">
-          <div className="hidden items-center gap-1 sm:flex">
-            {navigationItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="px-4 py-2 font-mono text-[10px] font-medium uppercase tracking-[0.16em] text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {t(item.labelKey)}
-              </a>
-            ))}
-          </div>
-
-          <a
-            href={nextPath}
-            onClick={handleLanguageChange}
-            aria-label={t("language.switchLabel")}
-            className="ml-4 border border-border bg-secondary px-4 py-2 font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-foreground transition-colors hover:border-accent hover:bg-accent hover:text-accent-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-          >
-            {t("language.switch")}
+    <nav aria-label={t("navigation.label")} className="navigation">
+      <a href="#home" className="wordmark">
+        <span className="wordmark-symbol" aria-hidden="true">JM</span>
+        <span className="wordmark-caption">
+          Jesús Mendoza
+          <span>{t("navigation.practice")}</span>
+        </span>
+      </a>
+      <div className="nav-links">
+        {navigationItems.map((item) => (
+          <a key={item.href} href={item.href}>
+            {t(item.labelKey)}
           </a>
-        </div>
+        ))}
       </div>
+      <a
+        className="language-switch"
+        href={nextPath}
+        onClick={handleLanguageChange}
+        aria-label={t("language.switchLabel")}
+        hrefLang={nextLang}
+        lang={nextLang}
+      >
+        <span className="language-current" aria-hidden="true">
+          {currentLang.toUpperCase()}
+        </span>
+        <span className="language-divider" aria-hidden="true">/</span>
+        {t("language.switch")}
+      </a>
     </nav>
   );
 };
-
 export default Navigation;

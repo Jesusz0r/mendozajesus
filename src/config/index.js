@@ -4,14 +4,12 @@ export default {
   siteTitleAlt: "Jesús Mendoza | Software Engineer",
   siteTitleManifest: "Jesús Mendoza | Software Engineer",
   siteUrl: "https://www.mendozajesus.com",
-  siteLanguage: "es",
   siteHeadline: "Jesús Mendoza | Software Engineer, Writer, and Builder",
   siteBanner: "",
   favicon: "../assets/favicon.ico",
   siteDescription:
     "Jesús Mendoza is a software engineer writing and building clear, dependable systems for the web and AI.",
   author: "Jesús Mendoza",
-  siteLogo: "",
   keywords: [
     "Software Engineer",
     "JavaScript Developer",
@@ -21,6 +19,5 @@ export default {
   ],
   userTwitter: "@JesusReveron",
   ogSiteName: "Jesús Mendoza",
-  ogLanguage: "es_ES",
   googleAnalyticsID: "UA-58977019-2",
 };

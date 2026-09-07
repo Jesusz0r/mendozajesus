@@ -1,166 +1,61 @@
-import React from "react";
-import { Helmet } from "react-helmet";
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-
 import config from "../config";
 
-const SEO = ({
-  data,
-  siteTitle = "Jesús Mendoza | Desarrollador JavaScript",
-  postNode,
-  postPath,
-  article,
-  buildTime,
-}) => {
+const SEO = () => {
   const { i18n } = useTranslation();
-  let title;
-  let description;
+  const language = i18n.resolvedLanguage;
+  const prefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
+  const homeURL = `${config.siteUrl}${prefix}`;
+  const url = `${homeURL}/${language}`;
+  const image = config.siteBanner ? `${homeURL}${config.siteBanner}` : null;
 
-  const realPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
-  const homeURL = `${config.siteUrl}${realPrefix}`;
-  const URL = `${homeURL}${postPath || ""}`;
-  const image = `${homeURL}${config.siteBanner}`;
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
-  if (article) {
-    const postMeta = postNode.frontmatter;
-    title = `${postMeta.title} | ${config.siteTitle}`;
-    description = postNode.excerpt;
-  } else {
-    title = config.siteTitleAlt;
-    description = config.siteDescription;
-  }
-
-  // schema.org in JSONLD format
-  // https://developers.google.com/search/docs/guides/intro-structured-data
-  // You can fill out the 'author', 'creator' with more data or another type (e.g. 'Organization')
-
-  const schemaOrgWebPage = {
-    "@context": "http://schema.org",
+  const schema = {
+    "@context": "https://schema.org",
     "@type": "WebPage",
-    url: URL,
-    headline: config.siteHeadline,
-    inLanguage: config.siteLanguage,
-    mainEntityOfPage: URL,
-    description: config.siteDescription,
+    url,
     name: config.siteTitle,
+    headline: config.siteHeadline,
+    description: config.siteDescription,
+    inLanguage: language,
     author: {
       "@type": "Person",
       name: config.author,
     },
-    copyrightHolder: {
-      "@type": "Person",
-      name: config.author,
-    },
-    copyrightYear: "2019",
-    creator: {
-      "@type": "Person",
-      name: config.author,
-    },
-    publisher: {
-      "@type": "Person",
-      name: config.author,
-    },
-    datePublished: "2019-01-12T10:30:00+01:00",
-    dateModified: buildTime,
-    image: {
-      "@type": "ImageObject",
-      url: image,
-    },
-  };
-
-  let schemaArticle = null;
-
-  if (article) {
-    schemaArticle = {
-      "@context": "http://schema.org",
-      "@type": "Article",
-      author: {
-        "@type": "Person",
-        name: config.author,
-      },
-      copyrightHolder: {
-        "@type": "Person",
-        name: config.author,
-      },
-      copyrightYear: postNode.parent.birthtime,
-      creator: {
-        "@type": "Person",
-        name: config.author,
-      },
-      publisher: {
-        "@type": "Organization",
-        name: config.author,
-        logo: {
-          "@type": "ImageObject",
-          url: `${homeURL}${config.siteLogo}`,
-        },
-      },
-      datePublished: postNode.parent.birthtime,
-      dateModified: postNode.parent.mtime,
-      description,
-      headline: title,
-      inLanguage: "en",
-      url: URL,
-      name: title,
-      image: {
-        "@type": "ImageObject",
-        url: image,
-      },
-      mainEntityOfPage: URL,
-    };
-  }
-
-  const breadcrumb = {
-    "@context": "http://schema.org",
-    "@type": "BreadcrumbList",
-    description: "Breadcrumbs list",
-    name: "Breadcrumbs",
   };
 
   return (
-    <Helmet>
-      <html lang={i18n.language} />
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="image" content={image} />
-      <meta name="gatsby-starter" content="Gatsby Starter Minimal Blog" />
-      <meta property="og:locale" content={config.ogLanguage} />
-      <meta
-        property="og:site_name"
-        content={config.ogSiteName ? config.ogSiteName : ""}
-      />
-      <meta property="og:url" content={URL} />
-      <meta property="og:type" content={article ? "article" : "website"} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:image:alt" content={description} />
-      {config.siteFBAppID && (
-        <meta property="fb:app_id" content={config.siteFBAppID} />
+    <>
+      <title>{config.siteTitleAlt}</title>
+      <meta name="description" content={config.siteDescription} />
+      <link rel="canonical" href={url} />
+      <link rel="alternate" hrefLang="es" href={`${homeURL}/es`} />
+      <link rel="alternate" hrefLang="en" href={`${homeURL}/en`} />
+      <meta property="og:locale" content={language === "es" ? "es_ES" : "en_US"} />
+      <meta property="og:site_name" content={config.ogSiteName} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={config.siteTitleAlt} />
+      <meta property="og:description" content={config.siteDescription} />
+      <meta name="twitter:card" content={image ? "summary_large_image" : "summary"} />
+      <meta name="twitter:creator" content={config.userTwitter} />
+      <meta name="twitter:title" content={config.siteTitleAlt} />
+      <meta name="twitter:url" content={url} />
+      <meta name="twitter:description" content={config.siteDescription} />
+      {image && (
+        <>
+          <meta property="og:image" content={image} />
+          <meta property="og:image:alt" content={config.siteDescription} />
+          <meta name="twitter:image" content={image} />
+          <meta name="twitter:image:alt" content={config.siteDescription} />
+        </>
       )}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:creator"
-        content={config.userTwitter ? config.userTwitter : ""}
-      />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:url" content={config.siteUrl} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <meta name="twitter:image:alt" content={description} />
-      {/* Insert schema.org data conditionally (webpage/article) + everytime (breadcrumbs) */}
-      {!article && (
-        <script type="application/ld+json">
-          {JSON.stringify(schemaOrgWebPage)}
-        </script>
-      )}
-      {article && (
-        <script type="application/ld+json">
-          {JSON.stringify(schemaArticle)}
-        </script>
-      )}
-      <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
-    </Helmet>
+      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+    </>
   );
 };
 

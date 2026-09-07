@@ -1,63 +1,58 @@
 {
   "navigation": {
     "label": "Navegación principal",
+    "practice": "Ingeniería de software",
+    "skip": "Saltar al contenido",
     "about": "Perfil",
     "projects": "Proyectos",
     "books": "Libros",
     "experience": "Experiencia"
   },
   "hero": {
-    "available": "Disponible para proyectos seleccionados",
-    "greeting": "Hola, soy",
-    "intro": "Desarrollador front-end con mentalidad de sistemas.",
-    "statement": "Diseño y lanzo experiencias web claras y confiables, donde la interfaz, el producto y la ingeniería se sienten como un solo sistema pensado con cuidado.",
-    "stackLabel": "Vocabulario de trabajo",
-    "noteLabel": "Una nota de trabajo",
-    "note": "El mejor software parece obvio porque el trabajo difícil ocurrió antes del clic.",
-    "explore": "Leer las notas",
-    "codeComment1": "// {{years}}+ años creando",
-    "codeComment2": "// sistemas digitales claros"
+    "greeting": "Ingeniero de software / Autor / Creador independiente",
+    "since": "Construyendo desde 2017",
+    "statement": "De interfaces a productos de IA. Creo software y escribo sobre los sistemas que lo hacen posible.",
+    "explore": "Conoce al ingeniero",
+    "location": "Ciudad de México",
+    "disciplines": "Raíces front-end. Mentalidad de sistemas."
   },
   "about": {
-    "badge": "02 / Perfil",
-    "title": "Conoce al",
-    "titleHighlight": "constructor.",
-    "subtitle": "{{years}}+ años transformando preguntas de producto en experiencias web claras y útiles.",
-    "bio": "Callado al principio, luego con opiniones claras. Me importa la cultura de empresa, la colaboración consciente y",
+    "badge": "Perfil del ingeniero",
+    "title": "El humano",
+    "titleHighlight": "en el sistema.",
+    "role": "Desarrollador front-end y autor técnico",
+    "subtitle": "{{years}}+ años de ingeniería web en plataformas de apps, fintech y logística.",
+    "bio": "Callado al principio. Con opiniones claras sobre el código. Me importa cómo trabaja un equipo tanto como lo que construye, y",
     "bioHighlight": "enseñar y aprender",
     "bioContinue": "algo nuevo cada día.",
-    "stats": {
-      "years": "Años de experiencia",
-      "companies": "Empresas"
-    },
-    "noteLabel": "Una nota sobre la práctica",
-    "codeComment": "// El estándar que mantengo",
     "techStack": "Herramientas y métodos",
-    "techStackSubtitle": "La tecnología importa, pero también la forma de usarla: con mesura, curiosidad y cuidado por la persona al otro lado de la interfaz.",
     "principles": {
-      "title": "Lo que guía el trabajo.",
       "clarity": {
-        "title": "Claridad primero",
-        "description": "Resolver el problema antes de adornar la solución."
+        "title": "Entender primero",
+        "description": "Resolver el problema antes de diseñar la abstracción."
       },
       "craft": {
-        "title": "La calidad se siente",
-        "description": "Los pequeños detalles de implementación construyen confianza."
+        "title": "Cuidar los detalles",
+        "description": "Interfaces, casos límite y código que otro ingeniero tendrá que mantener."
       },
       "learning": {
-        "title": "Seguir aprendiendo",
-        "description": "Compartir lo que funciona, cuestionar lo que no y mejorar la siguiente versión."
+        "title": "Crear y compartir",
+        "description": "Convertir lo aprendido al crear sistemas en algo útil para otros ingenieros."
       }
     }
   },
   "projects": {
-    "eyebrow": "03 / Proyectos activos",
-    "title": "Trabajo ya",
-    "titleHighlight": "en producción.",
-    "intro": "Una selección de productos actuales y públicos. Cada enlace lleva a un despliegue de producción verificado.",
-    "count": "{{count}} despliegues de producción verificados",
-    "status": "En vivo",
-    "visit": "Visitar {{project}}",
+    "eyebrow": "Software independiente",
+    "title": "Circuito de productos",
+    "intro": "Distintos problemas. El mismo ingeniero. Software para uso real.",
+    "count": "{{count}} productos conectados",
+    "builtBy": "Creado por",
+    "select": "Selecciona un nodo para explorar un producto.",
+    "inspect": "Explorar {{project}}",
+    "inspector": "Inspector de proyectos",
+    "viewDetails": "Ver detalles de {{project}}",
+    "visit": "Abrir {{project}}",
+
     "items": {
       "citationPath": {
         "category": "Visibilidad en IA",
@@ -86,13 +81,11 @@
     }
   },
   "books": {
-    "eyebrow": "04 / Libros",
-    "title": "Sistemas que vale",
-    "titleHighlight": "la pena documentar.",
-    "intro": "Proyectos técnicos extensos sobre los sistemas detrás de la IA moderna: desde la fiabilidad de agentes y la economía de inferencia hasta el despliegue y la práctica de ingeniería.",
-    "collectionNote": "Investigación · sistemas · práctica",
-    "featuredLabel": "Libros técnicos seleccionados",
-    "featuredCount": "{{count}} proyectos de libro",
+    "eyebrow": "Publicaciones técnicas",
+    "title": "Ingeniería,",
+    "titleHighlight": "por escrito.",
+    "intro": "Fiabilidad de agentes. Economía de inferencia. IA en producción. Libros técnicos para ingenieros que necesitan más que una demo funcional.",
+    "read": "Leer en Gumroad",
     "coverAlt": "Portada de {{title}}",
     "visit": "Abrir {{title}} en Gumroad",
     "items": {
@@ -129,48 +122,45 @@
     }
   },
   "experience": {
-    "badge": "05 / Experiencia",
-    "title": "Una trayectoria de",
-    "titleHighlight": "trabajo.",
-    "subtitle": "Un recorrido consciente por equipos, productos e interfaces que los hicieron útiles.",
+    "badge": "Trayectoria / 2017 — actualidad",
+    "title": "Madrid",
+    "titleHighlight": "→ Ciudad de México.",
+    "subtitle": "Plataformas de apps, finanzas personales, crédito empresarial y logística internacional. Distintos sectores. Más herramientas con cada experiencia.",
     "current": "Actual",
     "jobs": {
       "nuvocargo": {
         "position": "Desarrollador Front-end",
         "location": "Ciudad de México",
         "date": "Mar 2022 - Actualidad",
-        "duration": "+2 años",
         "description": "Desarrollo de aplicaciones web para la industria logística, creando interfaces intuitivas y escalables."
       },
       "credijusto": {
         "position": "Desarrollador Front-end",
         "location": "Ciudad de México",
         "date": "Oct 2019 - Mar 2022",
-        "duration": "2 años 5 meses",
         "description": "Desarrollo de plataformas fintech para servicios de crédito empresarial."
       },
       "fintonic": {
         "position": "Desarrollador Full-stack",
         "location": "Madrid, España",
         "date": "Abr 2018 - Ago 2019",
-        "duration": "1 año 4 meses",
         "description": "Desarrollo de funcionalidades para una aplicación de gestión financiera personal."
       },
       "kingofapp": {
         "position": "Desarrollador Full-stack",
         "location": "Madrid, España",
         "date": "Ene 2017 - Abr 2018",
-        "duration": "1 año 3 meses",
         "description": "Creación de módulos y plugins para una plataforma de desarrollo de apps móviles."
       }
     }
   },
   "footer": {
-    "tagline": "Interfaces, sistemas y libros técnicos.",
-    "madeWith": "Hecho con cuidado por",
-    "by": "Jesús Mendoza",
-    "rights": "Todos los derechos reservados",
-    "backToTop": "Volver al inicio"
+    "eyebrow": "Lo siguiente / tu idea",
+    "title": "Hagamos",
+    "titleHighlight": "que funcione.",
+    "intro": "Un producto por construir, un problema de ingeniería o una buena pregunta. Hablemos.",
+    "note": "Para humanos. Hecho con React.",
+    "backToTop": "Volver arriba"
   },
   "language": {
     "switch": "EN",

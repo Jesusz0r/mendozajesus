@@ -6,7 +6,6 @@ import AboutSection from "../components/AboutSection";
 import Bookshelf from "../components/Bookshelf";
 import ExperienceSection from "../components/ExperienceSection";
 import HeroSection from "../components/HeroSection";
-import LiveProjects from "../components/LiveProjects";
 
 const CAREER_START_DATE = new Date(2017, 0, 1);
 
@@ -31,7 +30,11 @@ const HomePage = () => {
   useEffect(() => {
     const path = window.location.pathname;
     if (path === "/") {
-      window.history.replaceState({}, "", "/es");
+      window.history.replaceState(
+        {},
+        "",
+        `/es${window.location.search}${window.location.hash}`,
+      );
     }
 
     const targetLang = resolveLanguageFromPath();
@@ -52,9 +55,8 @@ const HomePage = () => {
 
   return (
     <Layout>
-      <HeroSection yearsOfExperience={yearsOfExperience} />
+      <HeroSection />
       <AboutSection yearsOfExperience={yearsOfExperience} />
-      <LiveProjects />
       <Bookshelf />
       <ExperienceSection />
     </Layout>
