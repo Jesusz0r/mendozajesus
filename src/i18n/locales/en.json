@@ -5,7 +5,6 @@
     "skip": "Skip to content",
     "about": "Profile",
     "projects": "Projects",
-    "books": "Books",
     "experience": "Experience"
   },
   "hero": {
@@ -77,47 +76,6 @@
       "moodMentor": {
         "category": "Wellbeing",
         "description": "An AI-powered mood-tracking app for reflection and daily wellbeing insights."
-      }
-    }
-  },
-  "books": {
-    "eyebrow": "Technical publications",
-    "title": "Engineering,",
-    "titleHighlight": "in writing.",
-    "intro": "Agent reliability. Inference economics. Production AI. Technical books for engineers who need more than a working demo.",
-    "read": "Read on Gumroad",
-    "coverAlt": "Cover of {{title}}",
-    "visit": "Open {{title}} on Gumroad",
-    "items": {
-      "agentReliability": {
-        "discipline": "Production agents",
-        "description": "Testing, operating, and improving AI agents that do consequential work.",
-        "meta": "426 pages · 37 chapters"
-      },
-      "aiNative": {
-        "discipline": "Coding agents",
-        "description": "A method for specifying, verifying, and owning delegated implementation.",
-        "meta": "358 pages · 34 chapters"
-      },
-      "inferenceEconomics": {
-        "discipline": "AI infrastructure",
-        "description": "Tokens, GPUs, latency, capacity, and the business of serving models.",
-        "meta": "408 pages · 36 chapters"
-      },
-      "forwardDeployed": {
-        "discipline": "AI deployment",
-        "description": "The discipline of deploying AI in real customer environments.",
-        "meta": "348 pages · 25 chapters"
-      },
-      "appliedAi": {
-        "discipline": "Production AI",
-        "description": "Building agent systems with workflows, evaluation, tracing, and safety controls.",
-        "meta": "11 chapters · field guide"
-      },
-      "agentLoop": {
-        "discipline": "AI systems",
-        "description": "How AI agents think, act, and use tools—an engineering guide.",
-        "meta": "241 pages · 17 chapters"
       }
     }
   },

@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 const navigationItems = [
   { href: "#projects", labelKey: "navigation.projects" },
   { href: "#sobre-mi", labelKey: "navigation.about" },
-  { href: "#books", labelKey: "navigation.books" },
   { href: "#experiencia", labelKey: "navigation.experience" },
 ];
 

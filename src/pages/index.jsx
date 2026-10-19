@@ -3,7 +3,6 @@ import i18n from "../i18n";
 
 import Layout from "../components/Layout";
 import AboutSection from "../components/AboutSection";
-import Bookshelf from "../components/Bookshelf";
 import ExperienceSection from "../components/ExperienceSection";
 import HeroSection from "../components/HeroSection";
 
@@ -57,7 +56,6 @@ const HomePage = () => {
     <Layout>
       <HeroSection />
       <AboutSection yearsOfExperience={yearsOfExperience} />
-      <Bookshelf />
       <ExperienceSection />
     </Layout>
   );

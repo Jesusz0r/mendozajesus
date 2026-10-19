@@ -501,38 +501,6 @@
 .skills li { display: flex; align-items: center; gap: 8px; border: 1px solid var(--color-border); padding: 9px 11px; font-family: var(--font-mono); font-size: 11px; }
 .skills svg { stroke-width: 1.4; }
 
-.books-section {
-  --section-muted: color-mix(in srgb, var(--color-background) 76%, var(--color-foreground));
-  --section-rule: color-mix(in srgb, var(--color-background) 25%, var(--color-foreground));
-  background: var(--color-foreground);
-  color: var(--color-background);
-}
-.books-section :focus-visible { outline-color: var(--color-signal); }
-.books-section .section-heading h2 > span { color: var(--color-signal); }
-.book-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-.book-link {
-  position: relative;
-  display: grid;
-  grid-template-columns: 126px minmax(0, 1fr);
-  align-items: start;
-  gap: 26px;
-  height: 100%;
-  padding: 29px;
-  border: 1px solid var(--section-rule);
-  transition: border-color 160ms ease, background-color 160ms ease;
-}
-.book-link::before { content: ""; position: absolute; top: -1px; left: 29px; width: 30px; height: 4px; background: var(--section-rule); }
-.book-link:is(:hover, :focus-visible) { border-color: var(--color-signal); background: color-mix(in srgb, var(--color-background) 4%, var(--color-foreground)); }
-.book-link:is(:hover, :focus-visible)::before { background: var(--color-signal); }
-.book-cover img { display: block; width: 126px; height: auto; aspect-ratio: 5 / 8; object-fit: cover; box-shadow: 4px 4px 0 var(--section-rule); }
-.book-details .eyebrow { font-size: 11px; }
-.book-details h3 { margin: 12px 0; font-family: var(--font-display); font-size: 33px; line-height: 1; }
-.book-details > p:not(.eyebrow) { color: var(--section-muted); font-size: 14px; }
-.book-meta { display: block; margin-top: 17px; color: var(--section-muted); font-family: var(--font-mono); font-size: 11px; }
-.book-action { display: inline-flex; align-items: center; gap: 11px; margin-top: 20px; color: var(--color-signal); font-family: var(--font-mono); font-size: 11px; }
-.book-action svg { transition: transform 160ms ease; }
-.book-link:is(:hover, :focus-visible) .book-action svg { transform: translate(2px, -2px); }
-
 .experience-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin: 0; padding: 0; list-style: none; }
 .experience-list > li { position: relative; padding-right: 27px; }
 .experience-list > li::before { content: ""; position: absolute; left: 0; right: 0; top: 50px; height: 2px; background: var(--color-accent); }
@@ -583,9 +551,6 @@
   .node-face { padding-inline: 11px; }
   .node-name { font-size: 26px; }
   .about-section { gap: 45px; }
-  .book-link { grid-template-columns: 105px minmax(0, 1fr); gap: 20px; padding: 24px; }
-  .book-cover img { width: 105px; }
-  .book-details h3 { font-size: 30px; }
   .footer-inner { gap: 45px; }
 }
 
@@ -608,11 +573,6 @@
   .project-description { min-height: 0; }
   .inspector-domain { margin: 5px 0 0; }
   .project-inspector .action-link { align-self: end; }
-  .book-grid { grid-template-columns: 1fr; }
-  .book-link { grid-template-columns: 130px minmax(0, 1fr); padding: 28px; gap: 30px; }
-  .book-cover img { width: 130px; }
-  .book-details h3 { font-size: 38px; }
-  .book-details > p:not(.eyebrow) { font-size: 14px; }
 }
 
 @media (max-width: 900px) {
@@ -690,11 +650,6 @@
   .principles { grid-template-columns: 1fr; gap: 21px; }
   .principles > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
   .principles h3 { margin: 0; font-size: 25px; }
-  .book-link { grid-template-columns: 1fr; gap: 24px; padding: 25px; }
-  .book-cover { padding-top: 5px; }
-  .book-cover img { width: 140px; }
-  .book-details h3 { font-size: 36px; }
-  .book-details > p:not(.eyebrow) { font-size: 14px; }
   .footer-bottom { flex-wrap: wrap; gap: 5px 20px; margin-top: 40px; }
 }
 

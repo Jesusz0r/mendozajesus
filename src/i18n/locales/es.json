@@ -5,7 +5,6 @@
     "skip": "Saltar al contenido",
     "about": "Perfil",
     "projects": "Proyectos",
-    "books": "Libros",
     "experience": "Experiencia"
   },
   "hero": {
@@ -77,47 +76,6 @@
       "moodMentor": {
         "category": "Bienestar",
         "description": "Una aplicación de seguimiento del estado de ánimo con IA para la reflexión y el bienestar diario."
-      }
-    }
-  },
-  "books": {
-    "eyebrow": "Publicaciones técnicas",
-    "title": "Ingeniería,",
-    "titleHighlight": "por escrito.",
-    "intro": "Fiabilidad de agentes. Economía de inferencia. IA en producción. Libros técnicos para ingenieros que necesitan más que una demo funcional.",
-    "read": "Leer en Gumroad",
-    "coverAlt": "Portada de {{title}}",
-    "visit": "Abrir {{title}} en Gumroad",
-    "items": {
-      "agentReliability": {
-        "discipline": "Agentes en producción",
-        "description": "Cómo probar, operar y mejorar agentes de IA que realizan trabajo relevante.",
-        "meta": "426 páginas · 37 capítulos"
-      },
-      "aiNative": {
-        "discipline": "Agentes de código",
-        "description": "Un método para especificar, verificar y asumir la responsabilidad del trabajo delegado.",
-        "meta": "358 páginas · 34 capítulos"
-      },
-      "inferenceEconomics": {
-        "discipline": "Infraestructura de IA",
-        "description": "Tokens, GPUs, latencia, capacidad y el negocio de servir modelos.",
-        "meta": "408 páginas · 36 capítulos"
-      },
-      "forwardDeployed": {
-        "discipline": "Despliegue de IA",
-        "description": "La disciplina de desplegar IA en entornos reales de clientes.",
-        "meta": "348 páginas · 25 capítulos"
-      },
-      "appliedAi": {
-        "discipline": "IA en producción",
-        "description": "Sistemas de agentes con flujos de trabajo, evaluación, trazas y controles de seguridad.",
-        "meta": "11 capítulos · guía práctica"
-      },
-      "agentLoop": {
-        "discipline": "Sistemas de IA",
-        "description": "Cómo los agentes de IA razonan, actúan y usan herramientas: una guía de ingeniería.",
-        "meta": "241 páginas · 17 capítulos"
       }
     }
   },
